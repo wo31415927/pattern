@@ -4,15 +4,15 @@ package compound;
  * @author zeyu 2017/11/10
  */
 public abstract class AbstractDuck implements IDuck{
-    protected IObservable<> observable = new Observable<>();
+    protected IObservable<IDuck> observable = new Observable<>();
 
     @Override
-    public void addObserver(IObserver observer) {
+    public void addObserver(IObserver<IDuck> observer) {
         observable.addObserver(observer);
     }
 
     @Override
-    public void removeObserver(IObserver observer) {
+    public void removeObserver(IObserver<IDuck> observer) {
         observable.removeObserver(observer);
     }
 
